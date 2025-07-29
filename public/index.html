@@ -1,36 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Price Graph for Pets Grow a Garden</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Graph Interface</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #18181b;
+      color: #eee;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #23232b;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0008;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      color: #3b82f6;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      background: #2a2a33;
+      color: #eee;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .info {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>29 July 2025</h1>
-
-    <!-- {saya akan menaruh grafik harga menggunakan png disini} -->
-    <img src="graph.png" alt="Price Chart" class="graph" />
-
-    <div id="demand-list">Loading...</div>
-  </div>
-
-  <script>
-    fetch('demand.json')
-      .then(res => res.json())
-      .then(data => {
-        const list = document.getElementById('demand-list');
-        list.innerHTML = '';
-        data.forEach(entry => {
-          const h2 = document.createElement('h2');
-          h2.textContent = entry.name;
-          const p = document.createElement('p');
-          p.textContent = entry.demand;
-          list.appendChild(h2);
-          list.appendChild(p);
-        });
-      });
-  </script>
-</body>
-</html>
+    <h2>
