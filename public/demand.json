@@ -1,0 +1,11 @@
+[
+  { "name": "Raccoon", "demand": "Demand - (stable)" },
+  { "name": "Dragonfly", "demand": "Demand ↓ (stable but low)" },
+  { "name": "Disco Bee", "demand": "Demand ~ (Fluctuating)" },
+  { "name": "Butterfly", "demand": "Demand ↑ (stable but high)" },
+  { "name": "Mimic Octopus", "demand": "Demand - (stable)" },
+  { "name": "Fennec fox", "demand": "Demand - (stable)" },
+  { "name": "T-Rex", "demand": "Demand ↓ (stable but low)" },
+  { "name": "Spinosaurus", "demand": "Demand - (stable)" },
+  { "name": "Corrupt kitsune", "demand": "Demand ↓↑ (surplus)" }
+]
