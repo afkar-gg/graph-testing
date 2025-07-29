@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Graph for Pets Grow a Garden</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>29 July 2025</h1>
+
+    <!-- {saya akan menaruh grafik harga menggunakan png disini} -->
+    <img src="graph.png" alt="Price Chart" class="graph" />
+
+    <div id="demand-list">Loading...</div>
+  </div>
+
+  <script>
+    fetch('demand.json')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('demand-list');
+        list.innerHTML = '';
+        data.forEach(entry => {
+          const h2 = document.createElement('h2');
+          h2.textContent = entry.name;
+          const p = document.createElement('p');
+          p.textContent = entry.demand;
+          list.appendChild(h2);
+          list.appendChild(p);
+        });
+      });
+  </script>
+</body>
+</html>
